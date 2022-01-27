@@ -28,14 +28,12 @@ public class FileCreator {
         }
     }
 
-    public void fileReader()
-    {
-        /*String fileData = "Some Test";
-        FileOutputStream fos = new FileOutputStream("test2.txt");
-        fos.write(fileData.getBytes)
-        fos.flush();
-        fos.close();*/ 
+    public List<Eintrag> leseDatei(){
+        List<Eintrag> highscore = new List<Eintrag>();
+        
+        return highscore;
     }
+    
 
     //ertsellt und schreibt in die text datei
     public static void main (String[] args) 
