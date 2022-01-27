@@ -14,6 +14,7 @@ public class Spiel
 
     private List<Eintrag> highscore;
 
+    private FileCreator fileCreator;
     /*Konstruktor*/
     public Spiel()
     {      
@@ -23,8 +24,10 @@ public class Spiel
 
         croupier = new Croupier();
         spieler = new Spieler(name);
-
-        highscore = new List<Eintrag>();
+        
+        fileCreator = new FileCreator();
+        
+        highscore = fileCreator.leseDatei();
         
         System.out.println("Möchten Sie das Spiel starten?");
         String eingabe = sc.next();
@@ -277,9 +280,9 @@ public class Spiel
     }
 
     public void spielerInHighscoreEintragen(String name, int score){
-        if(highscore.hasAccess()){
-            highscore.toFirst();
-        }
+        
+        highscore.toFirst();
+        
         while(highscore.hasAccess() && highscore.getContent().gibPunkte() > score){
             highscore.next();              
         }
@@ -292,7 +295,7 @@ public class Spiel
         }
 
     }
-
+    
     private int punktberechnungSpielende(int s, int v)
     {
         int erg = 0;
