@@ -239,7 +239,7 @@ public class Spiel
         }
     }
 
-    private void sortiereHighscore(List l){
+    private void sortiereHighscore(List<Eintrag> l){
         l.toFirst();
         List<Eintrag> tmp = new List<Eintrag>();
         Eintrag groeßtes = (Eintrag)l.getContent();
