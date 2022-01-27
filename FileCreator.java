@@ -5,7 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 public class FileCreator {
-    public static void main(String args[])
+    public static void main2(String args[])
     {
         try 
         {
@@ -37,12 +37,13 @@ public class FileCreator {
         fos.close();*/ 
     }
 
-    public static void main2 (String[] args) 
+    //ertsellt und schreibt in die text datei
+    public static void main (String[] args) 
     {
-        Path path = Paths.get("test3.txt");
+        Path path = Paths.get("Highscore.txt");
         try 
         {
-            String str = "Hallo";
+            String str = "";
             byte[] bs = str.getBytes();
             Path writtenFilePath = Files.write(path, bs);
             System.out.println(str);
